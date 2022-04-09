@@ -1,3 +1,26 @@
-<ul *ngFor="let quote of quotes">
+<!-- <ul *ngFor="let quote of quotes">
     <li>{{quote.quote}} <span class="text-primary">{{quote.author}}</span><span class="text-danger ml-3">Upvotes:{{quote.upvotes}}</span><span class="text-danger ml-3">Downvotes:{{quote.downvotes}}</span></li> 
-</ul>
+</ul> -->
+
+<div class="row">
+    <div class="col-md-8">
+      <div *ngFor='let quote of quotes;let i = index'>
+          <!-- <p>{{quote.quote}}</p> -->
+          <blockquote>
+              &quot;{{quote.quote}} &quot;
+              <p><b><span>{{quote.author}}</span></b></p>
+            </blockquote>
+        <div>
+          <button (click)='quoteDetails(i)' class="btn btn-primary">Quote Details</button>
+        </div> <br>
+
+        <div *ngIf='quote.showDescription'>
+          <app-quote-detail  [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <!-- <app-quote-form (addQuote)="addNewQuote)($event)"></app-Quote-form> -->
+ </div>
+ 
+ 
