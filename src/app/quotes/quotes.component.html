@@ -15,6 +15,9 @@
         </div> <br>
 
         <div *ngIf='quote.showDescription'>
+            <p>Added by: {{quote.addedBy}}</p>
+            <p>Upvotes: {{quote.upvotes}}</p>
+            <p>Downvotes: {{quote.downvotes}}</p>
           <app-quote-detail  [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
         </div>
       </div>
