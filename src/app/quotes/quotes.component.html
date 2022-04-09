@@ -1,19 +1,19 @@
 <div>
-    <h2 class="text-center mt-4 mb-5">Awesome Quotes to uplift your day. Upvote for your best quotes!</h2>
+    <h2 class="text-center mt-4 mb-5">Awesome Quotes to uplift your day.</h2>
 </div>
 <div class="quote_s">
     <div class="box1">
         <div text-center>
-            <h3 class="text-center">Add Quote</h3><br>
+            <h3 class="text-center mt-2">Awesome Quotes</h3><br>
         </div>
-        <div class="col-md-10 ml-5">
+        <div class="col-md-11 ml-5">
             <div *ngFor='let quote of quotes;let i = index'>
                 <blockquote>
                     &quot;{{quote.quote}} &quot;
                     <p><b><span>{{quote.author}}</span></b></p>
                 </blockquote>
                 <div>
-                    <p class="dates">{{quote.inputDate | dateCount}} ago</p>
+                    <p class="dates">Posted: {{quote.inputDate | dateCount}} ago</p>
                     <button (click)='quoteDetails(i)' class="btn btn-primary">Quote Details</button>
                 </div>
                 <br>
