@@ -11,7 +11,6 @@ export class QuoteDetailComponent implements OnInit {
     @Input()
     quote!: Quote;
     quotes: any;
-    // isComplete: any;
     constructor() { }
   
     @Output()
