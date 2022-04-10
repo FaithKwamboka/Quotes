@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Quote } from '../quote';
+import { VotesComponent } from '../votes/votes.component';
 @Component({
   selector: 'app-quotes',
   templateUrl: './quotes.component.html',
@@ -14,7 +15,8 @@ export class QuotesComponent implements OnInit {
     // new Quote(4,"Life is never fair, and perhaps it is a good thing for most of us that it is not.", "Oscar Wilde", 0, 0, "", "Maureen Etoo", new Date(2020,35,15)),
     // new Quote(5, "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma — which is living with the results of other people's thinking.", "Steve Jobs", 0, 0, "", "John Steve", new Date(2021,3,21)) 
   ]
-  constructor() { }
+
+    constructor() { }
 
   ngOnInit(): void {
   }
@@ -47,27 +49,5 @@ export class QuotesComponent implements OnInit {
 
   highlightThis(highest:any) {
     console.log(1);
-  }
-
-  addDownVote(index:any) {
-    this.quotes[index].downvotes++;
-  }
-  addUpVote(index:any) {
-    this.quotes[index].upvotes;
-  }
-
-  highVote() {
-    const votesArray: number[] = [];
-    for (const quote of this.quotes) {
-      votesArray.push(quote.upvotes);
-    }
-    votesArray.sort();
-    console.log(votesArray[votesArray.length - 1]);
-    if (votesArray.length - 1 === votesArray.length - 2) {
-
-      return votesArray[votesArray.length - 2];
-    }
-
-    return votesArray[votesArray.length - 1];
   }
 }

@@ -14,15 +14,16 @@
                     <p><b><span>{{quote.author}}</span></b></p>
                 </blockquote>
                 <div>
-                    <p class="dates">Posted: {{quote.inputDate | dateCount}} ago <button class="ml-4">{{quote.upvotes}} Upvotes</button>  <button class="ml-4">{{quote.downvotes}} Downvotes</button></p>
+                    <p class="dates">Posted: {{quote.inputDate | dateCount}} ago </p>
+                    <!-- <app-votes></app-votes> <br> -->
                     <button (click)='quoteDetails(i)' class="btn btn-primary">Quote Details</button>
                 </div>
                 <br>
       
               <div *ngIf='quote.showDescription'>
                   <p>Added by: {{quote.addedBy}}</p>
-                  <p>Upvotes: {{quote.upvotes}}</p>
-                  <p>Downvotes: {{quote.downvotes}}</p>
+                  <!-- <p>Upvotes: {{quote.upvotes}}</p>
+                  <p>Downvotes: {{quote.downvotes}}</p> -->
                   <app-quote-detail  [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
                 </div>
             </div>
