@@ -19,6 +19,8 @@ export class QuoteDetailComponent implements OnInit {
     quoteDetails(index: any){
       this.quotes[index].showDescription = !this.quotes[index].showDescription;
     }
+
+
   
     ngOnInit() {
     }

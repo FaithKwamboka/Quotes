@@ -44,4 +44,30 @@ export class QuotesComponent implements OnInit {
       this.quotes.splice(index,1);
     }
   }
+
+  highlightThis(highest:any) {
+    console.log(1);
+  }
+
+  addDownVote(index:any) {
+    this.quotes[index].downvotes++;
+  }
+  addUpVote(index:any) {
+    this.quotes[index].upvotes;
+  }
+
+  checkHighVote() {
+    const votesArray: number[] = [];
+    for (const quote of this.quotes) {
+      votesArray.push(quote.upvotes);
+    }
+    votesArray.sort();
+    console.log(votesArray[votesArray.length - 1]);
+    if (votesArray.length - 1 === votesArray.length - 2) {
+
+      return votesArray[votesArray.length - 2];
+    }
+
+    return votesArray[votesArray.length - 1];
+  }
 }
