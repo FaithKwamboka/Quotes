@@ -5,6 +5,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
+#### Link: https://faithkwamboka.github.io/Quotes/
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
@@ -37,7 +39,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Further help
 
-For further help, contact me via [Faith Kwamboka](okongofaith3@gmail.com)
+For further help or collaboration, contact me via okongofaith3@gmail.com or +254727705173
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 MIT License
