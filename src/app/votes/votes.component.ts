@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
+
 
 @Component({
   selector: 'app-votes',
@@ -7,25 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VotesComponent implements OnInit {
 
-  numberOfVotes: number = 0;
+  upvotes_: number = 0;
   downvotes_: number = 0;
 
   upvoteButtonClick() {
-    this.numberOfVotes++;
+    this.upvotes_++;
   }
-  downvoteButtonClick() {
+
+    downvoteButtonClick() {
     this.downvotes_++;
   }
 
-  // votesup(){
-  //   return this.upvoteButtonClick
-  // }
-
-  // votesdown(){
-  //   return this.downvoteButtonClick
-  // }
-
-  constructor() { }
+    constructor() { }
 
   ngOnInit(): void {
   }

@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Quote } from '../quote';
-import { VotesComponent } from '../votes/votes.component';
+// import { VotesComponent } from '../votes/votes.component';
+
 @Component({
   selector: 'app-quotes',
   templateUrl: './quotes.component.html',
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
+
 
   quotes: Quote[]= [
     new Quote(1, "The greatest glory in living lies not in never falling, but in rising every time we fall.", "Nelson Mandela",0, 0, "", "Lucy", new Date(2010,4,9)),

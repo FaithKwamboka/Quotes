@@ -9,6 +9,7 @@
         <div class="col-md-11 ml-5">
             <div *ngFor='let quote of quotes;let i = index'>
                 <!-- <div appHighlight *ngIf='highVote()==quote.upvotes && quote.upvotes!=0'></div> -->
+                <!-- <div appHighlight *ngIf="{{upvotes_}}>{{downvotes_}}"</div>></div> -->
                 <blockquote>
                     &quot;{{quote.quote}} &quot;
                     <p><b><span>{{quote.author}}</span></b></p>
@@ -16,14 +17,18 @@
                 <div>
                     <p class="dates">Posted: {{quote.inputDate | dateCount}} ago </p>
                     <!-- <app-votes></app-votes> <br> -->
+                    <!-- <button (click)='quoteDetails(i)' class="btn btn-primary">Quote Details</button> -->
+                    <div class="mb-2">
+                        <app-votes></app-votes>
+                    </div>
                     <button (click)='quoteDetails(i)' class="btn btn-primary">Quote Details</button>
                 </div>
                 <br>
       
               <div *ngIf='quote.showDescription'>
                   <p>Added by: {{quote.addedBy}}</p>
-                  <!-- <p>Upvotes: {{quote.upvotes}}</p>
-                  <p>Downvotes: {{quote.downvotes}}</p> -->
+                  <!-- <p>Upvotes: {{upvotes_}}</p> -->
+                  <!-- <p>Downvotes: {{quote.downvotes}}</p> -->
                   <app-quote-detail  [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
                 </div>
             </div>
