@@ -13,10 +13,10 @@ This app allows a user to read quotes, add a quote, Upvote or downvote a quote a
 * Landing page
 ![Quote](https://user-images.githubusercontent.com/100117264/162615768-df96679a-c89d-4da2-a628-69e03b321cdf.png)
 
-* Upvote or Downvote
+* Delete a quote
 ![Quote-2](https://user-images.githubusercontent.com/100117264/162615774-b51afc56-dd80-4682-a576-de6273726d4f.png)
 
-* Delete a quote
+* Upvote or Downvote
 ![Quotes-1](https://user-images.githubusercontent.com/100117264/162615782-d432961e-2382-4438-86f4-1b182d22044e.png)
 
 ## Code scaffolding
