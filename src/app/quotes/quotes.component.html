@@ -8,6 +8,7 @@
         </div>
         <div class="col-md-11 ml-5">
             <div *ngFor='let quote of quotes;let i = index'>
+                <!-- <div appHighlight *ngIf='highVote()==quote.upvotes && quote.upvotes!=0'></div> -->
                 <blockquote>
                     &quot;{{quote.quote}} &quot;
                     <p><b><span>{{quote.author}}</span></b></p>

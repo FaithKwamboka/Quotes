@@ -8,7 +8,7 @@ import { Quote } from '../quote';
 export class QuotesComponent implements OnInit {
 
   quotes: Quote[]= [
-    new Quote(1, "The greatest glory in living lies not in never falling, but in rising every time we fall.", "Nelson Mandela",0, 0, "", "Lucy", new Date(2010,3,20)),
+    new Quote(1, "The greatest glory in living lies not in never falling, but in rising every time we fall.", "Nelson Mandela",0, 0, "", "Lucy", new Date(2010,4,9)),
     new Quote(2, "If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough.", "Oprah Winfrey", 0, 0, "", "Elijah", new Date(2019,3,20)),
     new Quote(3, "Do not go where the path may lead, go instead where there is no path and leave a trail.","Ralph Waldo Emerson", 0, 0, "", "Peter Doe", new Date(2015,5,20)),
     // new Quote(4,"Life is never fair, and perhaps it is a good thing for most of us that it is not.", "Oscar Wilde", 0, 0, "", "Maureen Etoo", new Date(2020,35,15)),
@@ -56,7 +56,7 @@ export class QuotesComponent implements OnInit {
     this.quotes[index].upvotes;
   }
 
-  checkHighVote() {
+  highVote() {
     const votesArray: number[] = [];
     for (const quote of this.quotes) {
       votesArray.push(quote.upvotes);
